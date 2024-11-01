@@ -1,17 +1,21 @@
-﻿@{
-	ViewData["Title"] = "Home Page";
+﻿@using SuperMarket.Models
+@model List<CategoryModel>
+
+@{
+    ViewData["Title"] = "Home Page";
 }
 
-	<h1>category</h1>
-	<p>
-	</p>
-	<br>
-	<ul>
-		<li>
-			<a href ="/categories/edit/1">Beverage</a>
-		</li>
-		<li>
-			<a href="/categories/edit/2">Meat</a>
-		</li>
-	</ul>
-	<br/>
+<h1 class="display-4 text-primary text-center my-4">Category</h1>
+
+<div class="container mt-4">
+    <ul class="list-group">
+        <li class="list-group-item d-flex justify-content-between align-items-center">
+            <a href="/categories/edit/1" class="text-decoration-none text-dark font-weight-bold">Beverage</a>
+            <span class="badge badge-primary badge-pill">Edit</span>
+        </li>
+        <li class="list-group-item d-flex justify-content-between align-items-center">
+            <a href="/categories/edit/2" class="text-decoration-none text-dark font-weight-bold">Meat</a>
+            <span class="badge badge-primary badge-pill">Edit</span>
+        </li>
+    </ul>
+</div>

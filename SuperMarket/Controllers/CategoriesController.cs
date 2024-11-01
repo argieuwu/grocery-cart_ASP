@@ -7,14 +7,14 @@ namespace SuperMarket.Controllers
     {
         public IActionResult Index()
         {
-            return View();
+            var categories = CategoriesRepositoryModel.GetCategoryModels();
+            return View(categories);
         }
 
       
         public IActionResult Edit(int? id)
         {
-            var category = new CategoryModel
-            {CategoryId = id.HasValue?id.Value : 0};
+            var category = new CategoryModel{CategoryId = id.HasValue?id.Value : 0};
 
             return View(category);
         }
