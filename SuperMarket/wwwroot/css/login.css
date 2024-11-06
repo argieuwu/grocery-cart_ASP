@@ -1,6 +1,32 @@
-﻿.login-container{
+﻿.login-container {
     display: flex;
     align-items: center;
     justify-content: center;
     min-height: 100vh;
+    background-color: #f8f9fa;
+}
+
+.login-card{
+    padding: 2rem;
+    border-radius:10px;
+    box-shadow:0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.login-logo img{
+    width: 120px;
+    margin-bottom: 1rem;
+}
+
+.form-control:focus {
+    box-shadow: none;
+    border-color: #28a745;
+}
+
+.btn-primary {
+    background-color: #28a745;
+    border-color: #28a74;
+}
+
+.btn-primary:hover {
+    background-color: #218838; 
 }
