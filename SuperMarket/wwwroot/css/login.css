@@ -13,7 +13,8 @@
 }
 
 .login-logo img{
-    width: 120px;
+    align-items:center;
+    width: 170px;
     margin-bottom: 1rem;
 }
 
