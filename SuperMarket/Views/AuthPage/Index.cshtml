@@ -1,0 +1,45 @@
+﻿@{
+    ViewData["Title"] = "GroceriCart - Login";
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link href="~/css/login.css" rel="stylesheet" />
+    <title>GroceriCart Login</title>
+</head>
+<body>
+
+    <div class="login-container">
+        <div class="card login-card">
+            <div class="text-center login-logo">
+                <img src="path/to/logo.png" alt="GroceriCart Logo" />
+                <h4 class="mt-2">Welcome to GroceriCart</h4>
+                <p class="text-muted">Please sign in to continue</p>
+            </div>
+
+            <form>
+                <div class="form-group">
+                    <label for="GroceryCartUsername">Username</label>
+                    <input id="GroceryCartUsername" type="text" class="form-control" placeholder="Enter username" required />
+                </div>
+                <div class="form-group">
+                    <label for="GroceryCartPassword">Password</label>
+                    <input id="GroceryCartPassword" type="password" class="form-control" placeholder="Enter password" required />
+                </div>
+
+                <button id="LoginButton" type="button" class="btn btn-primary btn-block">Login</button>
+                <div class="text-center mt-3">
+                    <a href="#" class="text-muted">Forgot password?</a>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
