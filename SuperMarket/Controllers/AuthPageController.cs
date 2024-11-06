@@ -8,5 +8,12 @@ namespace GeoceriCart.Controllers
         {
             return View();
         }
+
+
+        //login page
+        public IActionResult Login()
+        {
+            return View();
+        }
     }
 }

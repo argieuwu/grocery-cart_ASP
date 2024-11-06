@@ -12,13 +12,21 @@ namespace SuperMarket.Controllers
         {
             _logger = logger;
         } 
-
+        //home page
         public IActionResult Index()
         {
             return View();
         }
 
+
+        //privacy page
         public IActionResult Privacy()
+        {
+            return View();
+        }
+
+        //login page
+        public IActionResult Login()
         {
             return View();
         }
