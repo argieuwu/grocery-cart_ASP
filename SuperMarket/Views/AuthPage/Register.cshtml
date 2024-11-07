@@ -1,0 +1,45 @@
+﻿@{
+    ViewData["Title"] = "GroceriCart - Register";
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewData["Title"]</title>
+    <link rel="stylesheet" href="~/css/register.css" /> <!-- Separate CSS for Register -->
+</head>
+<body>
+
+    <div class="register-container">
+        <div class="card register-card">
+            <div class="text-center register-logo">
+                <img src="~/images/grocerycart-mainlogo.png" alt="GroceriCart Logo" />
+                <h4 class="mt-2">Create Your GroceriCart Account</h4>
+            </div>
+
+            <form>
+                <div class="form-group">
+                    <label for="RegisterUsername">Username</label>
+                    <input id="RegisterUsername" type="text" class="form-control" placeholder="Enter username" required />
+                </div>
+                <div class="form-group">
+                    <label for="RegisterEmail">Email</label>
+                    <input id="RegisterEmail" type="email" class="form-control" placeholder="Enter email" required />
+                </div>
+                <div class="form-group">
+                    <label for="RegisterPassword">Password</label>
+                    <input id="RegisterPassword" type="password" class="form-control" placeholder="Enter password" required />
+                </div>
+                <button type="submit" class="btn btn-primary btn-block">Register</button>
+            </form>
+
+            <div class="text-center mt-3">
+                <a href="@Url.Action("Login", "AuthPage")" class="text-muted">Already have an account? Login</a>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
