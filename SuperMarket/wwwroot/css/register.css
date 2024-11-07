@@ -23,3 +23,12 @@
 .register-logo h4 {
     font-weight: bold;
 }
+
+.btn-primary {
+    background-color: #28a745;
+    border-color: #28a74;
+}
+
+    .btn-primary:hover {
+        background-color: #218838;
+    }

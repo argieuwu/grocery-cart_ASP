@@ -5,8 +5,7 @@
         private static List<CategoryModel> _categories = new List<CategoryModel>()
         {
             new CategoryModel {CategoryId = 1, Name = "ratatowe", Description = "bombay"},
-            new CategoryModel {CategoryId = 2, Name = "tatowe", Description = "bay"},
-            new CategoryModel {CategoryId = 3, Name = "towe", Description = "y"}
+    
         };
 
         public static void AddCategory (CategoryModel category)

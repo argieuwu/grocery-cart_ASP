@@ -8,7 +8,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>@ViewData["Title"]</title>
-    <link rel="stylesheet" href="~/css/register.css" /> <!-- Separate CSS for Register -->
+    <link rel="stylesheet" href="~/css/register.css" /> 
 </head>
 <body>
 
@@ -32,7 +32,12 @@
                     <label for="RegisterPassword">Password</label>
                     <input id="RegisterPassword" type="password" class="form-control" placeholder="Enter password" required />
                 </div>
-                <button type="submit" class="btn btn-primary btn-block">Register</button>
+                <div class="form-group">
+                    <label for="RegisterConfirmPassword">Confirm Password</label>
+                    <input id="RegisterConfirmPassword" type="password" class="form-control" placeholder="Enter confirm password" required />
+                </div>
+
+                <button id="RegisterButton" type="submit" class="btn btn-primary btn-block">Register</button>
             </form>
 
             <div class="text-center mt-3">
