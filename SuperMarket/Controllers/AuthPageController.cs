@@ -20,5 +20,22 @@ namespace GeoceriCart.Controllers
         {
             return View();
         }
+
+        [HttpPost]
+        public IActionResult Login(string username, string password)
+        {
+            // Validate username and password (this is just a placeholder for actual authentication logic)
+            if (username == "testuser" && password == "password") // Replace this with actual authentication
+            {
+                // Redirect to the homepage on successful login
+                return RedirectToAction("Index", "Home");
+            }
+            else
+            {
+                // Show an error message or redirect to the login page with an error
+                ViewBag.ErrorMessage = "Invalid username or password";
+                return View();
+            }
+        }
     }
 }

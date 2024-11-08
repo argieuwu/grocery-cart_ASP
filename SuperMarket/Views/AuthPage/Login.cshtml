@@ -1,5 +1,5 @@
 ﻿@{
-    ViewData["Title"] = "GroceriCart - Log  in";
+    ViewData["Title"] = "GroceriCart - Log in";
 }
 
 <!DOCTYPE html>
@@ -16,32 +16,33 @@
     <div class="login-container">
         <div class="card login-card">
             <div class="text-center login-logo">
-                <img src="~/images/grocerycart-mainlogo.png"/>
+                <img src="~/images/grocerycart-mainlogo.png" />
                 <h4 class="mt-2">Welcome to GroceriCart</h4>
                 <p class="text-muted">Please sign in to continue</p>
             </div>
 
-            <form>
+            <!-- Updated form to use POST method -->
+            <form asp-action="Login" asp-controller="AuthPage" method="post">
                 <div class="form-group">
                     <label for="GroceryCartUsername">Username</label>
-                    <input id="GroceryCartUsername" type="text" class="form-control" placeholder="Enter username" required />
+                    <input id="GroceryCartUsername" name="username" type="text" class="form-control" placeholder="Enter username" required />
                 </div>
                 <div class="form-group">
                     <label for="GroceryCartPassword">Password</label>
-                    <input id="GroceryCartPassword" type="password" class="form-control" placeholder="Enter password" required />
+                    <input id="GroceryCartPassword" name="password" type="password" class="form-control" placeholder="Enter password" required />
                 </div>
 
-                <button id="LoginButton" type="button" class="btn btn-primary btn-block">Login</button>
+                <!-- Changed button type to 'submit' -->
+                <button id="LoginButton" type="submit" class="btn btn-primary btn-block">Login</button>
                 <div class="text-center mt-3">
                     <a href="#" class="text-muted">Forgot password?</a>
                 </div>
                 <div class="text-center mt-3">
-                    <a href="@Url.Action("Register", "AuthPage")" class="text-muted">Don't have an account? Register</a> 
+                    <a href="@Url.Action("Register", "AuthPage")" class="text-muted">Don't have an account? Register</a>
                 </div>
             </form>
         </div>
     </div>
 
-    
 </body>
 </html>
