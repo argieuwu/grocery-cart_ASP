@@ -1,0 +1,39 @@
+﻿/* Basic styling for the navbar */
+.navbar, .second-navbar {
+    background-color: #333;
+    overflow: hidden;
+}
+
+    .navbar ul, .second-navbar ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+    }
+
+    .navbar li, .second-navbar li {
+        float: left;
+    }
+
+    .navbar a, .second-navbar a {
+        display: block;
+        padding: 14px 20px;
+        color: white;
+        text-align: center;
+        text-decoration: none;
+    }
+
+        .navbar a:hover, .second-navbar a:hover {
+            background-color: #ddd;
+            color: black;
+        }
+
+/* Style for the second navbar */
+.second-navbar {
+    margin-top: 10px; /* space between navbars */
+    background-color: #555;
+}
+
+    .second-navbar li {
+        float: none; /* Make the links stack vertically */
+        display: inline-block;
+    }
