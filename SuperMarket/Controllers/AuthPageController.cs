@@ -28,7 +28,7 @@ namespace GeoceriCart.Controllers
             if (username == "testuser" && password == "password") // Replace this with actual authentication
             {
                 // Redirect to the homepage on successful login
-                return RedirectToAction("Index", "Home");
+                return RedirectToAction("Homepage", "Home");
             }
             else
             {
