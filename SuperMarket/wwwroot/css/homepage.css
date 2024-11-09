@@ -51,12 +51,13 @@ body {
 .welcome-section {
     text-align: center;
     padding: 3rem;
-    background-color: #28a745;
+    background-color: #62825D;
+    border-radius: 0.3rem;
     color: #fff;
 }
 
     .welcome-section .btn-shop-now {
-        background-color: #343a40;
+        background-color: #198754;
         color: #fff;
         padding: 0.7rem 1.5rem;
         margin-top: 1rem;
@@ -69,7 +70,8 @@ body {
 .categories-section {
     padding: 2rem;
     text-align: center;
-    background-color: #f1f1f1;
+    border-radius: 0.3rem;
+    background-color: #62825D;
 }
 
     .categories-section .categories-container {
@@ -83,9 +85,20 @@ body {
         background-color: #fff;
         padding: 1rem;
         border-radius: 0.3rem;
-        width: 150px;
+        width: 150px; /* Adjusted to make card wider */
         text-align: center;
     }
+
+        /* Style for images inside the category card */
+        .categories-section .category-card img {
+            width: 100px; 
+            height: auto; 
+            border-radius: 0.3rem;
+        }
+        .categories-section .category-card h4 {
+            margin-top: 0.5rem; /* Adjust the spacing as desired */
+        }
+
 
 /* Featured Products Section */
 .featured-section {
