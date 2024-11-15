@@ -10,20 +10,25 @@ body {
     background-color: #f8f9fa;
 }
 
-
-
-/* Welcome Section */
-.welcome-section {
+/* Hero Section */
+.hero-section {
     text-align: center;
     padding: 3rem;
     background-color: #80AF81;
-    border-radius: 0.3rem;
     color: #fff;
+    border-radius: 0.3rem;
 }
 
-    .welcome-section .btn-shop-now {
+    .hero-section .hero-banner {
         background-color: #1A5319;
-        color: #fff;
+        padding: 1rem;
+        border-radius: 0.3rem;
+        margin-top: 1rem;
+    }
+
+    .hero-section .btn-shop-now {
+        background-color: #fff;
+        color: #1A5319;
         padding: 0.7rem 1.5rem;
         margin-top: 1rem;
         display: inline-block;
@@ -35,8 +40,8 @@ body {
 .categories-section {
     padding: 2rem;
     text-align: center;
-    border-radius: 0.3rem;
     background-color: #80AF81;
+    border-radius: 0.3rem;
 }
 
     .categories-section .categories-container {
@@ -50,35 +55,34 @@ body {
         background-color: #fff;
         padding: 1rem;
         border-radius: 0.3rem;
-        width: 150px; /* Adjusted to make card wider */
+        width: 150px;
         text-align: center;
     }
 
-        /* Style for images inside the category card */
         .categories-section .category-card img {
-            width: 100px; 
-            height: auto; 
+            width: 100px;
+            height: auto;
             border-radius: 0.3rem;
         }
+
         .categories-section .category-card h4 {
-            margin-top: 0.5rem; /* Adjust the spacing as desired */
+            margin-top: 0.5rem;
         }
 
-
-/* Featured Products Section */
-.featured-section {
+/* Popular Products Section */
+.popular-section {
     padding: 2rem;
     text-align: center;
 }
 
-    .featured-section .featured-container {
+    .popular-section .popular-container {
         display: flex;
         justify-content: center;
         gap: 1rem;
         flex-wrap: wrap;
     }
 
-    .featured-section .product-card {
+    .popular-section .product-card {
         background-color: #D6EFD8;
         padding: 1rem;
         border-radius: 0.3rem;
@@ -86,7 +90,17 @@ body {
         text-align: center;
     }
 
-    .featured-section .btn-add-to-cart {
+        .popular-section .product-card img {
+            width: 100px;
+            height: auto;
+            border-radius: 0.3rem;
+        }
+
+        .popular-section .product-card h4 {
+            margin-top: 0.8rem;
+        }
+
+    .popular-section .btn-add-to-cart {
         background-color: #1A5319;
         color: #fff;
         padding: 0.5rem 1rem;
@@ -95,19 +109,6 @@ body {
         display: inline-block;
         margin-top: 0.5rem;
     }
-
-    .featured-section .product-card img {
-        width: 100px;
-        height: auto;
-        border-radius: 0.3rem;
-      
-    }
-   
-
-    .featured-section .product-card h4 {
-        margin-top: 0.8rem; 
-    }
-
 
 /* Footer */
 .footer {
