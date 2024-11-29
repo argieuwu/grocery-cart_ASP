@@ -1,0 +1,141 @@
+﻿@using SuperMarket.Models
+@model List<CategoryModel>
+
+@{
+    ViewData["Title"] = "Grocery Products";
+}
+
+<link rel="stylesheet" href="~/css/product.css">
+
+
+<div class="container mt-5">
+    <h1 class="display-4 text-success text-center mb-4">Explore Our Grocery Products</h1>
+    <p class="lead text-center text-secondary mb-5">
+        Find fresh and high-quality groceries to meet all your needs. Add products to your cart and enjoy a seamless shopping experience.
+    </p>
+
+    <!-- Search and Filter Section -->
+    <div class="row mb-4">
+        <div class="col-md-8 mx-auto">
+            <input type="text" class="form-control shadow-sm" id="search" placeholder="Search for products...">
+        </div>
+    </div>
+
+    <!-- Products Grid -->
+    <div class="row">
+        @foreach (var product in Model.Take(6)) 
+        {
+            <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
+                <div class="card shadow-sm">
+                    <img src="~/images/fruitsandvegetables1.jpg" class="card-img-top" alt="@product.Name" style="height: 200px; object-fit: cover;">
+                    <div class="card-body">
+                        <h5 class="card-title">@product.Name</h5>
+                        <p class="card-text text-secondary">$@product.Price.ToString()</p>
+                        <a href="/cart/add/@product.CategoryId" class="btn btn-success btn-sm w-100">
+                            <i class="fas fa-cart-plus"></i> Add to Cart
+                        </a>
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+
+    <div class="row">
+        @foreach (var product in Model.Skip(6).Take(6)) 
+        {
+            <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
+                <div class="card shadow-sm">
+                    <img src="~/images/fruitsandvegetables1.jpg" class="card-img-top" alt="@product.Name" style="height: 200px; object-fit: cover;">
+                    <div class="card-body">
+                        <h5 class="card-title">@product.Name</h5>
+                        <p class="card-text text-secondary">$@product.Price.ToString()</p>
+                        <a href="/cart/add/@product.CategoryId" class="btn btn-success btn-sm w-100">
+                            <i class="fas fa-cart-plus"></i> Add to Cart
+                        </a>
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+
+    <div class="row">
+        @foreach (var product in Model.Skip(12).Take(6)) 
+        {
+            <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
+                <div class="card shadow-sm">
+                    <img src="~/images/fruitsandvegetables1.jpg" class="card-img-top" alt="@product.Name" style="height: 200px; object-fit: cover;">
+                    <div class="card-body">
+                        <h5 class="card-title">@product.Name</h5>
+                        <p class="card-text text-secondary">$@product.Price.ToString()</p>
+                        <a href="/cart/add/@product.CategoryId" class="btn btn-success btn-sm w-100">
+                            <i class="fas fa-cart-plus"></i> Add to Cart
+                        </a>
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+
+    <div class="row">
+        @foreach (var product in Model.Skip(18).Take(6)) 
+        {
+            <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
+                <div class="card shadow-sm">
+                    <img src="~/images/fruitsandvegetables1.jpg" class="card-img-top" alt="@product.Name" style="height: 200px; object-fit: cover;">
+                    <div class="card-body">
+                        <h5 class="card-title">@product.Name</h5>
+                        <p class="card-text text-secondary">$@product.Price.ToString()</p>
+                        <a href="/cart/add/@product.CategoryId" class="btn btn-success btn-sm w-100">
+                            <i class="fas fa-cart-plus"></i> Add to Cart
+                        </a>
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+
+    <div class="row">
+        @foreach (var product in Model.Skip(24).Take(6)) 
+        {
+            <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
+                <div class="card shadow-sm">
+                    <img src="~/images/fruitsandvegetables1.jpg" class="card-img-top" alt="@product.Name" style="height: 200px; object-fit: cover;">
+                    <div class="card-body">
+                        <h5 class="card-title">@product.Name</h5>
+                        <p class="card-text text-secondary">$@product.Price.ToString()</p>
+                        <a href="/cart/add/@product.CategoryId" class="btn btn-success btn-sm w-100">
+                            <i class="fas fa-cart-plus"></i> Add to Cart
+                        </a>
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+
+    <div class="row">
+        @foreach (var product in Model.Skip(30).Take(6)) 
+        {
+            <div class="col-lg-3 col-md-4 col-sm-6 mb-4">
+                <div class="card shadow-sm">
+                    <img src="~/images/fruitsandvegetables1.jpg" class="card-img-top" alt="@product.Name" style="height: 200px; object-fit: cover;">
+                    <div class="card-body">
+                        <h5 class="card-title">@product.Name</h5>
+                        <p class="card-text text-secondary">$@product.Price.ToString()</p>
+                        <a href="/cart/add/@product.CategoryId" class="btn btn-success btn-sm w-100">
+                            <i class="fas fa-cart-plus"></i> Add to Cart
+                        </a>
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+
+
+    <!-- No Products Found -->
+    @if (!Model.Any())
+    {
+        <div class="text-center mt-5">
+            <h3 class="text-secondary">No products found.</h3>
+        </div>
+    }
+</div>

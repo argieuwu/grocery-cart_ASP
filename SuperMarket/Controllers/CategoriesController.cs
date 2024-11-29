@@ -5,7 +5,7 @@ namespace SuperMarket.Controllers
 {
     public class CategoriesController : Controller
     {
-        public IActionResult Index()
+        public IActionResult Shopnow()
         {
             var categories = CategoriesRepositoryModel.GetCategoryModels();
             return View(categories);
